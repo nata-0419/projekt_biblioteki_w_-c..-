@@ -20,6 +20,42 @@ struct Klient {
 
 const int MAX_KLIENTOW = 1000;
 
+void wyswietl_wszystkich_czytelnikow() {
+    system("chcp 65001>>null");
+
+    ifstream plik("klient.txt");
+    string linia;
+
+    if (!plik.is_open()) {
+        cout << "Bląd przy otwieraniu pliku." << endl;
+        return;
+    }
+
+    cout << "Dane wszystkich uczniów w bibliotece:" << endl;
+    while (getline(plik, linia)) {
+        cout << linia << endl;
+    }
+    plik.close();
+}
+
+void wyswietl_wszystkie_wypozyczenia() {
+    system("chcp 65001>>null");
+
+    ifstream plik("wypozyczenieK.txt");
+    string linia;
+
+    if (!plik.is_open()) {
+        cout << "Bląd przy otwieraniu pliku." << endl;
+        return;
+    }
+
+    cout << "Dane wszystkich wypożyczonych książek w bibliotece:" << endl;
+    while (getline(plik, linia)) {
+        cout << linia << endl;
+    }
+
+    plik.close();
+}
 
 int odczytaj_klientow_z_pliku(const string& filename, Klient klienci[MAX_KLIENTOW]) {
     ifstream plik(filename);

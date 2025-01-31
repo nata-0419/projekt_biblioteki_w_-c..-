@@ -140,4 +140,20 @@ void stan_ksiazek(){
     }
 }
 
+void wyswietl_wszystkie_ksiazki() {
+    ifstream plik("ksiazki.txt");
+    string linia;
+    if (!plik.is_open()) {
+        cout << "Błąd przy otwieraniu pliku." << endl;
+        return;
+    }
+    cout << "Dane wszystkich książek w bibliotece:" << endl;
+    while (getline(plik, linia)) {
+        cout << linia << endl;
+    }
+
+    plik.close();
+}
+
+
 #endif

@@ -13,6 +13,41 @@
 
 using namespace std;
 
+void wyswietl() {
+    system("chcp 65001>>null");
+
+    int wybWyswietl;
+    int kontynuuj = 1;
+
+    while (kontynuuj) {
+    cout << endl;
+    cout << "Wybierz cyfrę, która odpowiada plikowi jaki chcesz wyswietlić: " << endl;
+    cout << "1. Baze książek" << endl;
+    cout << "2. Czytelników biblioteki" << endl;
+    cout << "3. Wypożyczone książki" << endl;
+    cout << "4. Wrócić do menu pracownika" << endl;
+    cout << "Jeśli dokonaleś wyboru, wpisz cyferkę przypisaną czynności: "; cin >> wybWyswietl;
+    cout << endl;
+
+    switch (wybWyswietl) {
+        case 1:
+            wyswietl_wszystkie_ksiazki();
+            break;
+        case 2:
+            wyswietl_wszystkich_czytelnikow();
+            break;
+        case 3:
+            wyswietl_wszystkie_wypozyczenia();
+            break;
+        case 4:
+            kontynuuj = 0;
+            break;
+        default:
+            cout << "Niepoprawny wybór!" << endl;
+        }
+    }
+}
+
 void wyswietl_czas() {
     time_t timestamp = time(NULL);                          // Pobiera bieżący czas w sekundach
     struct tm datetime = *localtime(&timestamp);            // Konwertuje na format lokalny
@@ -45,7 +80,8 @@ void menu_pracownika() {
     cout << "4. Sprawdźić brakującące egzemplarze książek" << endl;
     cout << "5. Dokup egzemplarze książek" << endl;
     cout << "6. Zamów nowe książki do biblioteki" << endl;
-    cout << "7. Wylogować się z konta pracownika" << endl;
+    cout << "7. Wyświetl zawartość plików" << endl;
+    cout << "8. Wylogować się z konta pracownika" << endl;
     cout << "Jeśli dokonaleś wyboru, wpisz cyferkę przypisaną czynności: "; cin >> pracownik;
     cout << endl;
 
@@ -73,6 +109,9 @@ void menu_pracownika() {
             break;
             }
         case 7:
+            wyswietl();
+            break;
+        case 8:
             kontynuuj = 0;
             cout << "Dziękuję za dzisiejszą pracę" << endl;
             break;
