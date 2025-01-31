@@ -133,6 +133,7 @@ void wypozycz_ksiazke() {
         time_t now = time(0);
         char* dt = ctime(&now);
         plikWypozyczenieNowe << nrKartyKlienta << ":" << nrKsiazki << ":" << dt << endl;
+        cout << "Książka została wypożyczona." << endl;
     } else {
         cout << "Błąd przy zapisywaniu wypożyczenia!" << endl;
     }
@@ -168,7 +169,7 @@ void sprawdz_konto_klienta() {
         }
     }
     if (!znaleziono) {
-        cout << "Ten czytelnik nie wypożyczyl zadnej książki!" << endl;
+        cout << "Ten czytelnik nie ma zadnej książki na swoim koncie!" << endl;
     }
     plikWypozyczenie.close();
 }

@@ -3,7 +3,7 @@ Wielki Gatsby:F. Scott Fitzgerald:1925:powiesc:3:10:901
 Sherlock Holmes:Arthur Conan Doyle:1887:kryminal:2:7:902
 Władca Pierścieni:J.R.R. Tolkien:1954:fantastyka:4:12:903
 Mały Książę:Antoine de Saint-Exupéry:1943:bajka:6:12:904
-Sto lat samotności:Gabriel García Márquez:1967:powiesc:4:9:905
+Sto lat samotności:Gabriel García Márquez:1967:powiesc:4:8:905
 Zbrodnia i kara:Fyodor Dostojewski:1866:kryminal:3:6:906
 Hobbit:J.R.R. Tolkien:1937:fantastyka:5:11:907
 Król lew:Disney:1994:bajka:7:14:908
@@ -15,7 +15,7 @@ Przeminęło z wiatrem:Margaret Mitchell:1936:powiesc:4:9:913
 Morderstwo w Orient Expressie:Agatha Christie:1934:kryminal:3:7:914
 Wiedźmin:Andrzej Sapkowski:1993:fantastyka:5:12:915
 Czarnoksiężnik z Oz:L. Frank Baum:1900:bajka:4:8:916
-Wielki Mur:Neal Stephenson:1992:powiesc:6:11:917
+Wielki Mur:Neal Stephenson:1992:powiesc:20:11:917
 Lśnienie:Stephen King:1977:kryminal:4:10:918
 Harry Potter i Kamień Filozoficzny:J.K. Rowling:1997:fantastyka:7:15:919
 Zielona mila:Stephen King:1996:powiesc:5:29:920
@@ -25,13 +25,13 @@ Wichrowe Wzgórza:Emily Brontë:1847:powiesc:4:8:923
 W mocy szaleństwa:John Katzenbach:2001:kryminal:5:9:924
 Kroniki Narnijskie:C.S. Lewis:1956:fantastyka:4:10:925
 Przygody Tomka Sawyera:Mark Twain:1876:bajka:5:11:926
-Moby Dick:Herman Melville:1851:powiesc:3:7:927
+Moby Dick:Herman Melville:1851:powiesc:3:6:927
 Złodziejka książek:Markus Zusak:2005:kryminal:4:9:928
 Wiedźma z Rumburaków:Jaroslav Vacek:1984:fantastyka:6:12:929
 Król Artur i Rycerze Okrągłego Stołu:Sir Thomas Malory:1485:bajka:7:18:930
 Dzieci z Bullerbyn:Astrid Lindgren:1947:powiesc:4:8:931
 Przygoda na Wyspie Skarbów:Robert Louis Stevenson:1883:kryminal:3:6:932
-Śmierć na Nilu:Agatha Christie:1937:kryminal:5:2:933
+Śmierć na Nilu:Agatha Christie:1937:kryminal:5:1:933
 Germinal:Émile Zola:1885:powiesc:4:9:934
 Podróże Guliwera:Jonathan Swift:1726:bajka:6:12:935
 Złota gałąź:James George Frazer:1890:powiesc:3:7:936
@@ -43,3 +43,4 @@ Ania z Zielonego Wzgórza:L.M. Montgomery:1908:kryminal:25:25:941
 Dorotka:Zakora:2007:kryminal:15:16:942
 Krzyżacy:Henryk Sienkiewicz:1900:powiesc:90:87:943
 Pinokio:Dobrzyński:2003:bajka:20:17:944
+Plastuś:Beniamin:1940:powiesc:15:13:945
