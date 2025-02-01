@@ -15,7 +15,7 @@ Przeminęło z wiatrem:Margaret Mitchell:1936:powiesc:4:9:913
 Morderstwo w Orient Expressie:Agatha Christie:1934:kryminal:3:7:914
 Wiedźmin:Andrzej Sapkowski:1993:fantastyka:5:12:915
 Czarnoksiężnik z Oz:L. Frank Baum:1900:bajka:4:8:916
-Wielki Mur:Neal Stephenson:1992:powiesc:20:11:917
+Wielki Mur:Neal Stephenson:1992:powiesc:20:13:917
 Lśnienie:Stephen King:1977:kryminal:4:10:918
 Harry Potter i Kamień Filozoficzny:J.K. Rowling:1997:fantastyka:7:15:919
 Zielona mila:Stephen King:1996:powiesc:5:29:920
@@ -44,3 +44,4 @@ Dorotka:Zakora:2007:kryminal:15:16:942
 Krzyżacy:Henryk Sienkiewicz:1900:powiesc:90:87:943
 Pinokio:Dobrzyński:2003:bajka:20:17:944
 Plastuś:Beniamin:1940:powiesc:15:13:945
+Roszpunka:Disnay:2009:bajka:30:20:946

@@ -54,7 +54,7 @@ void wyswietl_czas() {
     char wyswietl[50];                                      // Tablica znaków do przechowywania sformatowanej daty
     strftime(wyswietl, 50, "%d:%m:%Y", &datetime);          // Formatuje czas
     cout << "Witam, dziś jest: " << wyswietl << endl;
-    cout << "Miło cię widzieć w naszej bibliotece miejskiej w Mińsku Mazowieckim.";
+    cout << "Miło cię widzieć w naszej bibliotece szkolnej w Mińsku Mazowieckim.";
 }
 
 int menu() {
