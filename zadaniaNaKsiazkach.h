@@ -71,6 +71,10 @@ void domow_ksiazke(Biblioteka& biblioteka){
     plikTymczasowy.close();
 
     if (znaleziono == 1) {
+        bool aaa=biblioteka.zloz_zamowienie();
+        if (aaa == false){
+            return;
+        }
         if (remove("ksiazki.txt") != 0) {
             cout << "Błąd przy usuwaniu pliku 'ksiazki.txt'." << endl;
             return;
@@ -79,7 +83,7 @@ void domow_ksiazke(Biblioteka& biblioteka){
             cout << "Bląd przy zmianie nazwy pliku tymczasowego na 'ksiazki.txt'." << endl;
             return;
         }
-        biblioteka.zloz_zamowienie();
+
         cout << "Zaktualizowano stan książki nr " << nrKsiazkiPlik << " o " << iloscKsiazek << " egzemplarzy." << endl;
     } else {
         remove("ksiazkiTym.txt");

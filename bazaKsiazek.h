@@ -29,7 +29,7 @@ public:
 
         zloz_zamowienie();
     }
-    void zloz_zamowienie() {
+    bool zloz_zamowienie() {
         cout << "Zamówienie zostało wysłane.\n";
         this_thread::sleep_for(chrono::seconds(5));
         system ("cls");
@@ -38,8 +38,9 @@ public:
         cout << "Czy zamówienie zostalo oplacone? (t/n): "; cin >> decyzja;
         if (decyzja == 't' || decyzja == 'T') {
             cout << "Zamówienie zostało przyjęte. Rozpoczynamy realizację zamówienia...\n";
-            thread t(&Biblioteka::opoznienie1, this);   // Uruchamiamy wątek realizacji
-            t.join();                                   // Czekamy na zakończenie wątku
+//            thread t(&Biblioteka::opoznienie1, this);   // Uruchamiamy wątek realizacji
+//            t.join();                                   // Czekamy na zakończenie wątku
+            return opoznienie1();
         } else {
             cout << "Zamówienie nie zostało przyjęte. Paczka zostaje anulowana.\n";
             exit(0);
@@ -104,7 +105,7 @@ private:
         return rodzaj;
     }
 
-    void opoznienie1() {
+    bool opoznienie1() {
         int licznik = 0;
         while (licznik < 2) {
             cout << "Kompletowanie zamówienia... (" << (licznik + 1) << "/2)\n";
@@ -113,10 +114,11 @@ private:
         }
         cout << "Paczka jest gotowa do wysylki!"<<endl;
         cout << endl;
-        kurier();
+        return kurier();
+ //       kurier();
     }
 
-    void kurier() {
+    bool kurier() {
         char decyzja;
         int prob = 0;
         while (prob < 3) {
@@ -125,13 +127,15 @@ private:
 
             if (decyzja == 't' || decyzja == 'T') {
                 cout << "Paczka została odebrana przez kuriera. Kontroluj trasę paczki...\n";
-                opoznienie2();
-                break;
+                return opoznienie2();
+ //               opoznienie2();
+ //               break;
             } else if (decyzja == 'n' || decyzja == 'N') {
                 prob++;
                 if (prob >= 3) {
                     cout << "Przekroczono maksymalną liczbę prób. Paczka zostaje anulowana.\n";
-                    break;
+                    return false;
+ //                   break;
                 }
                 cout << "Paczka nie została odebrana. Czekamy na kuriera...\n";
                 this_thread::sleep_for(chrono::seconds(5));
@@ -141,7 +145,7 @@ private:
         }
     }
 
-    void opoznienie2() {
+    bool opoznienie2() {
         int licznik = 0;
         while (licznik < 2) {
             cout << "Zamówienie w drodze... (" << (licznik + 1) << "/2)\n";
@@ -150,10 +154,10 @@ private:
         }
         cout << "Paczka dostarczona do miejsca docelowego!" << endl;
         cout << endl;
-        dostarczenie();
+        return dostarczenie();
     }
 
-    void dostarczenie() {
+    bool dostarczenie() {
         char decyzja;
         int prob = 0;
         while (prob < 3) {
@@ -162,13 +166,14 @@ private:
 
             if (decyzja == 't' || decyzja == 'T') {
                 cout << "Paczka została odebrana. Czekamy na zapisanie książek do bazy biblioteki.\n";
-                opoznienie3();
-                break;
+                return opoznienie3();
+ //               break;
             } else if (decyzja == 'n' || decyzja == 'N') {
                 prob++;
                 if (prob >= 3) {
                     cout << "Przekroczono maksymalną liczbę prób. Paczka zostaje anulowana.\n";
-                    break;
+                    return false;
+  //                  break;
                 }
                 cout << "Paczka nie została odebrana. Czekamy na odebranie zamówienia...\n";
                 this_thread::sleep_for(chrono::seconds(5));
@@ -178,7 +183,7 @@ private:
         }
     }
 
-    void opoznienie3() {
+    bool opoznienie3() {
         int licznik = 0;
         while (licznik < 2) {
             cout << "Zatwierdzanie egzemplarzy.... (" << (licznik + 1) << "/2)\n";
@@ -187,10 +192,10 @@ private:
         }
         cout << "Książki są w bazie bibliotecznej!" << endl;
         cout << endl;
-        rozlozenie();
+        return rozlozenie();
     }
 
-    void rozlozenie() {
+    bool rozlozenie() {
         char decyzja;
         int prob = 0;
         while (prob < 3) {
@@ -202,12 +207,12 @@ private:
                 this_thread::sleep_for(chrono::seconds(5));
                 system("cls");
                 zapisz_ksiazke();
-                return;
+                return true;
             } else if (decyzja == 'n' || decyzja == 'N') {
                 prob++;
                 if (prob >= 3) {
                     cout << "Przekroczono maksymalną liczbę prób. Program zostaje zakończony.\n";
-                    break;
+                    return false;
                 }
                 cout << "Książki nie zostały rozłożone. Czekamy na dalsze informacje...\n";
                 this_thread::sleep_for(chrono::seconds(5));
