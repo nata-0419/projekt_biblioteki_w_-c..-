@@ -38,8 +38,6 @@ public:
         cout << "Czy zamówienie zostalo oplacone? (t/n): "; cin >> decyzja;
         if (decyzja == 't' || decyzja == 'T') {
             cout << "Zamówienie zostało przyjęte. Rozpoczynamy realizację zamówienia...\n";
-//            thread t(&Biblioteka::opoznienie1, this);   // Uruchamiamy wątek realizacji
-//            t.join();                                   // Czekamy na zakończenie wątku
             return opoznienie1();
         } else {
             cout << "Zamówienie nie zostało przyjęte. Paczka zostaje anulowana.\n";
@@ -115,7 +113,6 @@ private:
         cout << "Paczka jest gotowa do wysylki!"<<endl;
         cout << endl;
         return kurier();
- //       kurier();
     }
 
     bool kurier() {
@@ -128,14 +125,11 @@ private:
             if (decyzja == 't' || decyzja == 'T') {
                 cout << "Paczka została odebrana przez kuriera. Kontroluj trasę paczki...\n";
                 return opoznienie2();
- //               opoznienie2();
- //               break;
             } else if (decyzja == 'n' || decyzja == 'N') {
                 prob++;
                 if (prob >= 3) {
                     cout << "Przekroczono maksymalną liczbę prób. Paczka zostaje anulowana.\n";
                     return false;
- //                   break;
                 }
                 cout << "Paczka nie została odebrana. Czekamy na kuriera...\n";
                 this_thread::sleep_for(chrono::seconds(5));
@@ -167,13 +161,11 @@ private:
             if (decyzja == 't' || decyzja == 'T') {
                 cout << "Paczka została odebrana. Czekamy na zapisanie książek do bazy biblioteki.\n";
                 return opoznienie3();
- //               break;
             } else if (decyzja == 'n' || decyzja == 'N') {
                 prob++;
                 if (prob >= 3) {
                     cout << "Przekroczono maksymalną liczbę prób. Paczka zostaje anulowana.\n";
                     return false;
-  //                  break;
                 }
                 cout << "Paczka nie została odebrana. Czekamy na odebranie zamówienia...\n";
                 this_thread::sleep_for(chrono::seconds(5));

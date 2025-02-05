@@ -5,7 +5,7 @@ Władca Pierścieni:J.R.R. Tolkien:1954:fantastyka:4:12:903
 Mały Książę:Antoine de Saint-Exupéry:1943:bajka:6:12:904
 Sto lat samotności:Gabriel García Márquez:1967:powiesc:4:8:905
 Zbrodnia i kara:Fyodor Dostojewski:1866:kryminal:3:6:906
-Hobbit:J.R.R. Tolkien:1937:fantastyka:5:11:907
+Hobbit:J.R.R. Tolkien:1937:fantastyka:5:12:907
 Król lew:Disney:1994:bajka:7:14:908
 Duma i uprzedzenie:Jane Austen:1813:powiesc:4:12:909
 Dziewczyna z pociągu:Paula Hawkins:2015:kryminal:3:10:910
@@ -15,7 +15,7 @@ Przeminęło z wiatrem:Margaret Mitchell:1936:powiesc:4:9:913
 Morderstwo w Orient Expressie:Agatha Christie:1934:kryminal:3:7:914
 Wiedźmin:Andrzej Sapkowski:1993:fantastyka:5:12:915
 Czarnoksiężnik z Oz:L. Frank Baum:1900:bajka:4:8:916
-Wielki Mur:Neal Stephenson:1992:powiesc:20:13:917
+Wielki Mur:Neal Stephenson:1992:powiesc:20:15:917
 Lśnienie:Stephen King:1977:kryminal:4:10:918
 Harry Potter i Kamień Filozoficzny:J.K. Rowling:1997:fantastyka:7:15:919
 Zielona mila:Stephen King:1996:powiesc:5:29:920
@@ -45,3 +45,4 @@ Krzyżacy:Henryk Sienkiewicz:1900:powiesc:90:87:943
 Pinokio:Dobrzyński:2003:bajka:20:17:944
 Plastuś:Beniamin:1940:powiesc:15:13:945
 Roszpunka:Disnay:2009:bajka:30:21:946
+sss:sss:2009:kulinarne:5:4:947

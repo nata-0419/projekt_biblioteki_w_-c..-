@@ -30,10 +30,8 @@ string wczytaj_haslo() {
 char zaszyfruj_litere(char litera, int przesuniecie){
     if (isupper(litera)) {
         return (litera - 'A' + przesuniecie % 26 + 'A');
-        //haslo[i] = (haslo[i] - 'A' + przesuniecie) % 26 + 'A';
     } else if (islower(litera)) {
         return (litera - 'a' + przesuniecie % 26 + 'a');
-        //haslo[i] = (haslo[i] - 'a' + przesuniecie) % 26 + 'a';
     }
     return litera;
 }
